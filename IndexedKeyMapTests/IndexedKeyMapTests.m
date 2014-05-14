@@ -5,30 +5,21 @@
 //  Created by Alex Gray on 5/13/14.
 //  Copyright (c) 2014 Alex Gray. All rights reserved.
 //
+@import Cocoa;
+#import <SenTestingKit/SenTestingKit.h>
+#import <IndexedKeyMap.h>
 
-#import <XCTest/XCTest.h>
-
-@interface IndexedKeyMapTests : XCTestCase
-
+@interface IndexedKeyMapTests : SenTestCase
+@property       IndexedKeyMap * kmap;
 @end
 
 @implementation IndexedKeyMapTests
 
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
+- (void)setUp { [super setUp]; _kmap = IndexedKeyMapExample; STAssertNotNil(_kmap, @"Empty map!"); }
 
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
+- (void)testReads {
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+  STAssertNotNil(_kmap, @"Empty map! for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 @end

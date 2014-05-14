@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B9D29BB1921E8B800C6C8F9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D29BA1921E8B800C6C8F9 /* Cocoa.framework */; };
 		7B9D29C51921E8B800C6C8F9 /* IndexedKeyMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D29C41921E8B800C6C8F9 /* IndexedKeyMap.m */; };
-		7B9D29CC1921E8B800C6C8F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D29CB1921E8B800C6C8F9 /* XCTest.framework */; };
-		7B9D29CD1921E8B800C6C8F9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D29BA1921E8B800C6C8F9 /* Cocoa.framework */; };
 		7B9D29D01921E8B800C6C8F9 /* libIndexedKeyMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D29B71921E8B800C6C8F9 /* libIndexedKeyMap.a */; };
-		7B9D29D61921E8B800C6C8F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B9D29D41921E8B800C6C8F9 /* InfoPlist.strings */; };
 		7B9D29D81921E8B800C6C8F9 /* IndexedKeyMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D29D71921E8B800C6C8F9 /* IndexedKeyMapTests.m */; };
+		7B9D29ED1921EDCA00C6C8F9 /* IndexedKeyMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9D29C31921E8B800C6C8F9 /* IndexedKeyMap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,36 +25,18 @@
 
 /* Begin PBXFileReference section */
 		7B9D29B71921E8B800C6C8F9 /* libIndexedKeyMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIndexedKeyMap.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B9D29BA1921E8B800C6C8F9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		7B9D29BD1921E8B800C6C8F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		7B9D29BE1921E8B800C6C8F9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		7B9D29BF1921E8B800C6C8F9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		7B9D29C21921E8B800C6C8F9 /* IndexedKeyMap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IndexedKeyMap-Prefix.pch"; sourceTree = "<group>"; };
-		7B9D29C31921E8B800C6C8F9 /* IndexedKeyMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexedKeyMap.h; sourceTree = "<group>"; };
-		7B9D29C41921E8B800C6C8F9 /* IndexedKeyMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexedKeyMap.m; sourceTree = "<group>"; };
-		7B9D29CA1921E8B800C6C8F9 /* IndexedKeyMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndexedKeyMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B9D29CB1921E8B800C6C8F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
-		7B9D29D31921E8B800C6C8F9 /* IndexedKeyMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IndexedKeyMapTests-Info.plist"; sourceTree = "<group>"; };
-		7B9D29D51921E8B800C6C8F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7B9D29D71921E8B800C6C8F9 /* IndexedKeyMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexedKeyMapTests.m; sourceTree = "<group>"; };
+		7B9D29C31921E8B800C6C8F9 /* IndexedKeyMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IndexedKeyMap.h; path = IndexedKeyMap/IndexedKeyMap.h; sourceTree = "<group>"; };
+		7B9D29C41921E8B800C6C8F9 /* IndexedKeyMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IndexedKeyMap.m; path = IndexedKeyMap/IndexedKeyMap.m; sourceTree = "<group>"; };
+		7B9D29CA1921E8B800C6C8F9 /* IndexedKeyMapTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndexedKeyMapTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B9D29D71921E8B800C6C8F9 /* IndexedKeyMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IndexedKeyMapTests.m; path = IndexedKeyMapTests/IndexedKeyMapTests.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7B9D29B41921E8B800C6C8F9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B9D29BB1921E8B800C6C8F9 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7B9D29C71921E8B800C6C8F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B9D29CD1921E8B800C6C8F9 /* Cocoa.framework in Frameworks */,
 				7B9D29D01921E8B800C6C8F9 /* libIndexedKeyMap.a in Frameworks */,
-				7B9D29CC1921E8B800C6C8F9 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,9 +46,9 @@
 		7B9D29AE1921E8B800C6C8F9 = {
 			isa = PBXGroup;
 			children = (
-				7B9D29C01921E8B800C6C8F9 /* IndexedKeyMap */,
-				7B9D29D11921E8B800C6C8F9 /* IndexedKeyMapTests */,
-				7B9D29B91921E8B800C6C8F9 /* Frameworks */,
+				7B9D29C31921E8B800C6C8F9 /* IndexedKeyMap.h */,
+				7B9D29C41921E8B800C6C8F9 /* IndexedKeyMap.m */,
+				7B9D29D71921E8B800C6C8F9 /* IndexedKeyMapTests.m */,
 				7B9D29B81921E8B800C6C8F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,65 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				7B9D29B71921E8B800C6C8F9 /* libIndexedKeyMap.a */,
-				7B9D29CA1921E8B800C6C8F9 /* IndexedKeyMapTests.xctest */,
+				7B9D29CA1921E8B800C6C8F9 /* IndexedKeyMapTests.octest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		7B9D29B91921E8B800C6C8F9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7B9D29BA1921E8B800C6C8F9 /* Cocoa.framework */,
-				7B9D29CB1921E8B800C6C8F9 /* XCTest.framework */,
-				7B9D29BC1921E8B800C6C8F9 /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7B9D29BC1921E8B800C6C8F9 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7B9D29BD1921E8B800C6C8F9 /* Foundation.framework */,
-				7B9D29BE1921E8B800C6C8F9 /* CoreData.framework */,
-				7B9D29BF1921E8B800C6C8F9 /* AppKit.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		7B9D29C01921E8B800C6C8F9 /* IndexedKeyMap */ = {
-			isa = PBXGroup;
-			children = (
-				7B9D29C31921E8B800C6C8F9 /* IndexedKeyMap.h */,
-				7B9D29C41921E8B800C6C8F9 /* IndexedKeyMap.m */,
-				7B9D29C11921E8B800C6C8F9 /* Supporting Files */,
-			);
-			path = IndexedKeyMap;
-			sourceTree = "<group>";
-		};
-		7B9D29C11921E8B800C6C8F9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7B9D29C21921E8B800C6C8F9 /* IndexedKeyMap-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7B9D29D11921E8B800C6C8F9 /* IndexedKeyMapTests */ = {
-			isa = PBXGroup;
-			children = (
-				7B9D29D71921E8B800C6C8F9 /* IndexedKeyMapTests.m */,
-				7B9D29D21921E8B800C6C8F9 /* Supporting Files */,
-			);
-			path = IndexedKeyMapTests;
-			sourceTree = "<group>";
-		};
-		7B9D29D21921E8B800C6C8F9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7B9D29D31921E8B800C6C8F9 /* IndexedKeyMapTests-Info.plist */,
-				7B9D29D41921E8B800C6C8F9 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +69,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9D29ED1921EDCA00C6C8F9 /* IndexedKeyMap.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +81,6 @@
 			buildConfigurationList = 7B9D29DB1921E8B800C6C8F9 /* Build configuration list for PBXNativeTarget "IndexedKeyMap" */;
 			buildPhases = (
 				7B9D29B31921E8B800C6C8F9 /* Sources */,
-				7B9D29B41921E8B800C6C8F9 /* Frameworks */,
 				7B9D29B51921E8B800C6C8F9 /* Headers */,
 			);
 			buildRules = (
@@ -184,7 +107,7 @@
 			);
 			name = IndexedKeyMapTests;
 			productName = IndexedKeyMapTests;
-			productReference = 7B9D29CA1921E8B800C6C8F9 /* IndexedKeyMapTests.xctest */;
+			productReference = 7B9D29CA1921E8B800C6C8F9 /* IndexedKeyMapTests.octest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -219,7 +142,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B9D29D61921E8B800C6C8F9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,36 +174,14 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		7B9D29D41921E8B800C6C8F9 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B9D29D51921E8B800C6C8F9 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		7B9D29D91921E8B800C6C8F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -290,55 +190,27 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 			};
 			name = Debug;
 		};
 		7B9D29DA1921E8B800C6C8F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				SDKROOT = macosx;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 			};
 			name = Release;
 		};
 		7B9D29DC1921E8B800C6C8F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IndexedKeyMap/IndexedKeyMap-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -346,8 +218,6 @@
 		7B9D29DD1921E8B800C6C8F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IndexedKeyMap/IndexedKeyMap-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -360,15 +230,18 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IndexedKeyMap/IndexedKeyMap-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "IndexedKeyMapTests/IndexedKeyMapTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					SenTestingKit,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -380,11 +253,14 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IndexedKeyMap/IndexedKeyMap-Prefix.pch";
 				INFOPLIST_FILE = "IndexedKeyMapTests/IndexedKeyMapTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					SenTestingKit,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -407,6 +283,7 @@
 				7B9D29DD1921E8B800C6C8F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B9D29DE1921E8B800C6C8F9 /* Build configuration list for PBXNativeTarget "IndexedKeyMapTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +292,7 @@
 				7B9D29E01921E8B800C6C8F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
