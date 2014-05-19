@@ -8,7 +8,41 @@
 typedef   id(^IDX_Each) (id k, id o, id sum, int x);
 typedef void(^IDX_Stop) (id k, id o, BOOL*s, int x);
 
-@implementation IndexedKeyMap { NSMutableArray *keys, *objs; }
+@implementation IndexedKeyMap { int pIndex; NSMutableArray *keys, *objs; } @dynamic primaryValue, primaryKey;
+
+#pragma mark - NSFastEnumeration Implementation / Proxy
+
+- (NSUInteger) countByEnumeratingWithState:(NSFastEnumerationState*)s objects:(id __unsafe_unretained [])b count:(NSUInteger)l {
+  return [objs countByEnumeratingWithState:s objects:b count:l];
+}
+
+- (void)     add:(id)smart {
+
+  if ([smart conformsToProtocol:@protocol(NSFastEnumeration)]){
+
+    if ([smart isKindOfClass:NSDictionary.class]) { // special case for dictionaries
+      [(NSDictionary*)smart enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        [self addObject:obj forKey:key];
+      }];
+    } else
+      for (id z in smart) [self add:z];
+  }
+  else { [self addObject:smart]; }
+}
+- (void)     addObject:(id)x forKey:(id)k { if (!x) return; [objs addObject:x]; [keys addObject:k?:NSNull.null]; }
+- (void) addObject:(id)x {
+
+  [objs addObject:x]; [keys addObject:NSNull.null];
+}
+- (NSUInteger) count { return objs.count; }
+- (void) removeObject:    (id)x { if (![objs containsObject:x]) return;
+
+  NSUInteger idx = [objs indexOfObject:x];
+  [objs removeObject:x];
+  [keys removeObjectAtIndex:idx];
+}
+- (void) addObjects:    (NSArray*)x { for (id z in x) [self    addObject:z];                                }
+- (void) removeObjects: (NSArray*)x { for (id z in x) [self removeObject:z];                                }
 
 -           (id)    reduce:(id)r
                       with:(IDX_Each)b { __block __typeof(r) reducer = r;
@@ -48,7 +82,33 @@ typedef void(^IDX_Stop) (id k, id o, BOOL*s, int x);
 }
 -           (id)        init { return self = super.init ? keys = @[].mutableCopy, objs = @[].mutableCopy, self : nil; }
 
+- (id) valueForUndefinedKey:(NSString *)k {
 
+  return [@"primaryKey"   isEqualToString:k] && keys.count ? keys.count < pIndex - 1 ? keys[pIndex] : keys.lastObject :
+         [@"primaryValue" isEqualToString:k] && objs.count ? objs.count < pIndex - 1 ? objs[pIndex] : objs.lastObject :
+         [super valueForUndefinedKey:k];
+}
+- (void) setValue:(id)x forUndefinedKey:(NSString *)k {
+
+  if (![@[@"primaryKey", @"primaryValue"]containsObject:k]) return [super setValue:x forUndefinedKey:k];
+
+  pIndex = [@"primaryValue" isEqualToString:k] ? [objs indexOfObject:x] : [keys indexOfObject:x];
+}
+//- (id) primaryValue {
+//
+//  return !objs.count ? nil : _primaryValue ?: _primaryKey ? objs[[keys indexOfObject:_primaryKey]] : nil;
+//}
+//- (id) primaryKey {
+//
+//  return !keys.count ? nil : _primaryKey ?: _primaryValue ? keys[[objs indexOfObject:_primaryValue]] : nil;
+//}
+//
+//+ (NSSet*) keyPathsForValuesAffectingValueForKey:(NSString*)k{ static NSArray *keys;
+//
+//  keys = keys ?: @[@"primaryKey", @"primaryValue"];
+//  return [keys containsObject:k] ? [NSSet setWithObject:keys[![keys indexOfObject:k]]]
+//                                 : [super keyPathsForValuesAffectingValueForKey:k];
+//}
 #pragma mark - Subscipting Protocol Implementation / Proxy
 
 -         (void) setObject:(id)x
